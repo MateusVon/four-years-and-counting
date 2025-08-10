@@ -1,29 +1,52 @@
+import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Heart, Camera, Quote } from 'lucide-react';
+import PhotoUpload from './PhotoUpload';
 
 import photo1 from '@/assets/photo1.jpg';
 import photo2 from '@/assets/photo2.jpg';
 import photo3 from '@/assets/photo3.jpg';
 import photo4 from '@/assets/photo4.jpg';
 import photo5 from '@/assets/photo5.jpg';
+import photo6 from '@/assets/photo6.jpg';
+import photo7 from '@/assets/photo7.jpg';
+import photo8 from '@/assets/photo8.jpg';
+import photo9 from '@/assets/photo9.jpg';
+import photo10 from '@/assets/photo10.jpg';
+import photo11 from '@/assets/photo11.jpg';
+import photo12 from '@/assets/photo12.jpg';
+import photo13 from '@/assets/photo13.jpg';
+import photo14 from '@/assets/photo14.jpg';
+import photo15 from '@/assets/photo15.jpg';
+import photo16 from '@/assets/photo16.jpg';
+import photo17 from '@/assets/photo17.jpg';
+import photo18 from '@/assets/photo18.jpg';
+import photo19 from '@/assets/photo19.jpg';
+import photo20 from '@/assets/photo20.jpg';
+import photo21 from '@/assets/photo21.jpg';
+import photo22 from '@/assets/photo22.jpg';
+import photo23 from '@/assets/photo23.jpg';
 
 const memories = [
   {
-    title: 'Our First Adventure',
-    description: 'Every picture tells a story, but this one tells our story.',
-    category: 'Travel',
+    title: 'O começo de tudo',
+    description:
+      'Quando cheguei em Ouro Branco, e sem saber, começou algo que mudaria a minha vida para sempre',
+    category: 'Beginning',
     imageUrl: photo1,
   },
   {
-    title: 'Cozy Moments',
-    description: 'The quiet moments together are the ones I treasure most.',
-    category: 'Casa',
+    title: 'O dia do pedido',
+    description: 'O dia em que te pedi em namoro',
+    category: 'Moments',
+    imageUrl: photo22,
   },
   {
-    title: 'Special Celebrations',
-    description: "Celebrating all of life's beautiful moments together.",
-    category: 'Celebrations',
+    title: 'Idas a BH',
+    description: 'A primeira, de muitas vezes que fui pra BH com sua familia.',
+    category: 'Travel',
+    imageUrl: photo23,
   },
   {
     title: 'Weekend Getaways',
@@ -33,13 +56,23 @@ const memories = [
 ];
 
 const loveQuotes = [
-  'In your eyes, I found my home.',
-  'Every love song makes sense with you.',
-  'You are my today and all of my tomorrows.',
-  'With you, I am exactly where I belong.',
+  'No seu abraço eu encontrei o meu lar',
+  'Cada musica de amor que existe no mundo faz sentido com você ao meu lado',
+  'Você é meu ontem, meu hoje e todos os meus amanhãs',
+  'Eu sempre te amei, e sempre vou te amar',
 ];
 
 const MemoriesSection = () => {
+  const [showUpload, setShowUpload] = useState(false);
+  const [uploadedPhotos, setUploadedPhotos] = useState<
+    Array<{
+      id: string;
+      url: string;
+      title: string;
+      description: string;
+    }>
+  >([]);
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
@@ -71,8 +104,8 @@ const MemoriesSection = () => {
             Nossas memórias
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Uma coleção de momentos que fizeram nossos corações errarem uma
-            batida e nossa conexão se aprofundar ainda mais
+            Uma coleção de momentos que fizeram nossos corações acelerarem e
+            nossa conexão se aprofundar ainda mais
           </p>
         </div>
 
@@ -107,14 +140,24 @@ const MemoriesSection = () => {
         </div>
 
         <div className="text-center mt-16">
-          <Button className="bg-gradient-romantic text-primary-foreground hover:shadow-glow transition-all duration-500 px-8 py-6 text-lg font-medium">
+          <Button 
+          onClick={() => setShowUpload(!showUpload)}
+          className="bg-gradient-romantic text-primary-foreground hover:shadow-glow transition-all duration-500 px-8 py-6 text-lg font-medium">
             <Heart className="mr-2" size={20} />
-            Add Your Photos Here
+            {showUpload ? 'Ocultar Upload' : 'Adicione mais fotos aqui 😁'} 
           </Button>
           <p className="text-sm text-muted-foreground mt-4">
-            Replace these placeholders with your actual photos and memories
+            {showUpload ? 'Faça upload das suas fotos especiais' : 'Clique para adicionar suas próprias memórias'}
           </p>
         </div>
+        {showUpload && (
+          <div className="mt-12 animate-fade-in">
+            <PhotoUpload 
+              photos={uploadedPhotos}
+              onPhotosChange={setUploadedPhotos}
+            />
+          </div>
+        )}
       </div>
     </section>
   );

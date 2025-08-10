@@ -75,7 +75,7 @@ export const Hero = ({ onScrollToStory, onScrollToMemories }: HeroProps) => {
         {/* Anniversary Date */}
         <div className="mt-16 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 inline-block">
           <p className="text-white/80 text-sm uppercase tracking-wider mb-2">
-            Nosso dia
+            Nosso dia 🩷
           </p>
           <p className="text-white text-2xl font-semibold">
             {/* You can customize this date */}

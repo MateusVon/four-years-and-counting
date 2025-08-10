@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Heart, Calendar, MapPin, Star } from 'lucide-react';
+import { Heart, Calendar, MapPin, Star, Bomb } from 'lucide-react';
 
 import photo1 from '@/assets/photo1.jpg';
 import photo2 from '@/assets/photo2.jpg';
@@ -8,6 +8,20 @@ import photo4 from '@/assets/photo4.jpg';
 import photo5 from '@/assets/photo5.jpg';
 import photo6 from '@/assets/photo6.jpg';
 import photo7 from '@/assets/photo7.jpg';
+import photo8 from '@/assets/photo8.jpg';
+import photo9 from '@/assets/photo9.jpg';
+import photo10 from '@/assets/photo10.jpg';
+import photo11 from '@/assets/photo11.jpg';
+import photo12 from '@/assets/photo12.jpg';
+import photo13 from '@/assets/photo13.jpg';
+import photo14 from '@/assets/photo14.jpg';
+import photo15 from '@/assets/photo15.jpg';
+import photo16 from '@/assets/photo16.jpg';
+import photo17 from '@/assets/photo17.jpg';
+import photo18 from '@/assets/photo18.jpg';
+import photo19 from '@/assets/photo19.jpg';
+import photo20 from '@/assets/photo20.jpg';
+import photo21 from '@/assets/photo21.jpg';
 
 const timelineEvents = [
   {
@@ -18,13 +32,13 @@ const timelineEvents = [
     icon: Heart,
     color: 'text-primary',
     imageUrl: photo1,
-    objectPosition: '[50%_30%]',
+    objectPosition: '[100%_30%]',
   },
   {
     date: '2019',
-    title: 'Viramos "amigos"',
+    title: 'Viramos amigos',
     description:
-      'Começamos a conversar mais, não eramos melhores amigos, mas eramos próximos de certa forma.',
+      'Começamos a conversar mais, não eramos melhores amigos, mas eramos próximos.',
     icon: Calendar,
     color: 'text-accent',
     imageUrl: photo7,
@@ -33,63 +47,100 @@ const timelineEvents = [
     date: '2020',
     title: 'Começamos a conversar mais',
     description:
-      'Nos aproximamos mais do que antes, mas por conta do Covid, paramos de conversar. (Não tenho nenhuma foto de 2020 na minha galeria.)',
+      'Nos aproximamos mais do que antes, mas por conta do Covid, paramos de conversar. (Essa é a unica foto de 2020 na minha galeria.)',
     icon: Heart,
     color: 'text-primary',
+    imageUrl: photo16,
   },
   {
-    date: 'August 11, 2021',
+    date: '11 de Agosto, 2021',
     title: 'Começo do namoro',
     description:
-      'Voltamos a conversar, e em agosto te pedi em namoro. Uma quinta feira, antes do meu ingles, em um dia que era pra você ir pra minha casa e acabou não indo por ser um dia de semana',
+      'Voltamos a conversar, e em agosto te pedi em namoro. Um pouco precipitado talvez, mas não me arrependo nem um pouco, afinal, você é o amor da minha vida!',
     icon: Star,
     color: 'text-accent',
+    imageUrl: photo2,
+    objectPosition: '[100%_100%]',
   },
   {
-    date: '2022',
-    title: 'First Anniversary',
-    description: 'We celebrated our first year anniversary at my house.',
+    date: '11 de Agosto, 2022',
+    title: 'Primeiro aniversário ',
+    description:
+      'Celebramos nosso primeiro aniversário, juntos, aqui em casa. :)',
     icon: Heart,
     color: 'text-primary',
+    imageUrl: photo4,
   },
   {
-    date: 'January 2023',
-    title: 'First Trip Together',
+    date: 'Janeiro, 2023',
+    title: 'Nossa primeira viagem',
     description:
-      "We traveled 'together' for the first time to Guarapari - what an adventure!",
+      'Primeira vez que viajamos juntos, não passei as festas de fim de ano com você, mas cheguei de surpresa na casa em Guarapari.',
     icon: MapPin,
     color: 'text-accent',
+    imageUrl: photo6,
   },
   {
     date: '2023',
-    title: 'Long Distance',
+    title: 'Relacionamento a distância',
     description:
-      'I moved out of the city to study - testing our love from afar.',
+      'Fui pra Viçosa, e isso testou a gente de uma forma. Não foi nossa melhor época, mas superamos e aprendemos lições importantes!',
     icon: Heart,
     color: 'text-primary',
   },
   {
     date: 'Dec 2023 - Jan 2024',
-    title: 'Holidays in Criciuma',
+    title: 'Final de ano em Criciuma',
     description:
-      "We were together during Christmas and New Year's in Criciuma.",
-    icon: Star,
+      'Nosso primeiro Natal e ano novo juntos, que venham muitos outros pela frente :).',
+    icon: Bomb,
     color: 'text-accent',
+    imageUrl: photo14,
   },
   {
     date: '2024',
     title: 'Back Together',
-    description: 'I came back to our city - no more distance between us!',
+    description:
+      'Por conta da greve, pude voltar pra Ouro Branco, e acabei decidindo trancar a faculdade. Isso nos fez ficar mais próximos.',
     icon: Heart,
     color: 'text-primary',
+    imageUrl: photo13,
+  },
+  {
+    date: 'Outubro de 2024',
+    title: 'Viagem para a Disney',
+    description:
+      'Uma das viagens que eu nunca imaginei que eu iria fazer, ir com você pra disney foi simplesmente a coisa mais magica que me aconteceu até hoje, não tenho palavras para descrever o quanto eu amei essa viagem',
+    icon: MapPin,
+    color: 'text-accent',
+    imageUrl: photo18,
   },
   {
     date: 'Dec 2024 - Jan 2025',
-    title: 'Family Celebrations',
+    title: 'Festas de fim de ano',
     description:
-      "Christmas at her family house and New Year's at her dad's house - building memories with family.",
+      'Passamos o natal e o ano novo com sua familia, eu adorei cada segundo desse final de ano.',
     icon: Star,
     color: 'text-accent',
+    imageUrl: photo19,
+  },
+  {
+    date: 'Janeiro de 2025',
+    title: 'Viagem para Paraty',
+    description:
+      'Uma viagem pra praia com a minha familia, foi curta mas eu adorei ter sua companhia nessa viagem comigo',
+    icon: MapPin,
+    color: 'text-accent',
+    imageUrl: photo17,
+  },
+  {
+    date: 'Agosto de 2025',
+    title: 'Nosso amor aumenta e supera todas as coisas',
+    description:
+      "Hoje, estamos juntos, com coisas para serem melhoradas, mas estamos seguindo nosso caminho, no nosso tempo. Não estamos atrasados, não estamos adiantados, we're just in time my lov :). Essa é a foto mais recente que tenho com você, e eu gosto muito dela pq ver vc e suas irmãs felizes juntas, me deixa muito feliz. Nossa história está longe de acabar. ",
+    icon: Heart,
+    color: 'text-accent',
+    imageUrl: photo21,
   },
 ];
 
@@ -104,7 +155,7 @@ const TimelineSection = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Toda história de amor é linda, mas a nossa é a minha favorita. Aqui
             vão alguns dos meus momentos favoritos ao seu lado durante nossa
-            jornada.
+            jornada, que ainda está longe de acabar.
           </p>
         </div>
 
@@ -133,8 +184,10 @@ const TimelineSection = () => {
                             <img
                               src={event.imageUrl}
                               alt={event.title}
-                              className={`w-full h-full object-cover object-${
-                                event.objectPosition || 'center'
+                              className={`w-full h-full object-cover object${
+                                event.objectPosition
+                                  ? `-${event.objectPosition}`
+                                  : '-center'
                               } transition-transform duration-500 group-hover:scale-110`}
                             />
                           </div>
