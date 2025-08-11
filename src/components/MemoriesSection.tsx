@@ -57,7 +57,7 @@ const memories = [
       'Todos os espetáculos e competições que eu fui te assistir, toda vez que você pisa no palco eu abro um sorriso enorme',
     category: 'Performances',
     imageUrl: photo3,
-    objectPosition: '[70%_25%]',
+    objectPosition: '70% 25%',
   },
   {
     title: 'Jogos',
@@ -65,7 +65,7 @@ const memories = [
       'Todos os meus treinos, amistosos e jogos que você foi assistir. A sua presença definitivamente me fez jogar melhor em cada um deles ',
     category: 'Games',
     imageUrl: photo10,
-    objectPosition: '[70%_70%]',
+    objectPosition: '[100%_100%]',
   },
   {
     title: 'Aniversários',
@@ -73,7 +73,7 @@ const memories = [
       'Seja nos seus, nos meus, nos dos nossos parentes, em cada aniversário que iamos, a presença era sempre muito bem vinda, e fazia falta quando não podia ir',
     category: 'Birthdays',
     imageUrl: photo12,
-    objectPosition: '[100%_100%]',
+    objectPosition: '[50%_50%]',
   },
   {
     title: 'Família',
@@ -157,11 +157,8 @@ const MemoriesSection = () => {
                 <img
                   src={memory.imageUrl}
                   alt={memory.title}
-                  className={`w-full h-full object-cover ${
-                    memory.objectPosition
-                      ? `object-${memory.objectPosition}`
-                      : 'object-[25%_85%]'
-                  } transition-transform duration-500 group-hover:scale-110`}
+                  style={{ objectPosition: memory.objectPosition || '25% 85%' }}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <CardContent className="p-6">

@@ -25,6 +25,8 @@ import photo21 from '@/assets/photo21.jpg';
 import photo22 from '@/assets/photo22.jpg';
 import photo23 from '@/assets/photo23.jpg';
 import photo24 from '@/assets/photo24.jpg';
+import photo25 from '@/assets/photo25.jpg';
+import photo26 from '@/assets/photo26.jpg';
 
 const timelineEvents = [
   {
@@ -35,7 +37,7 @@ const timelineEvents = [
     icon: Heart,
     color: 'text-primary',
     imageUrl: photo1,
-    objectPosition: '[70%_30%]',
+    objectPosition: '70% 30%',
   },
   {
     date: '2019',
@@ -63,7 +65,7 @@ const timelineEvents = [
     icon: Star,
     color: 'text-accent',
     imageUrl: photo2,
-    objectPosition: '[100%_100%]',
+    objectPosition: '70% 70%',
   },
   {
     date: '11 de Agosto, 2022',
@@ -193,19 +195,15 @@ const TimelineSection = () => {
                       <CardContent className="p-6">
                         {event.imageUrl && (
                           <div className="relative aspect-video overflow-hidden mb-4 rounded-lg">
-                            {event.imageUrl && (
-                              <div className="relative aspect-video overflow-hidden mb-4 rounded-lg">
-                                <img
-                                  src={event.imageUrl}
-                                  alt={event.title}
-                                  className={`w-full h-full object-cover ${
-                                    event.objectPosition
-                                      ? `object-${event.objectPosition}`
-                                      : 'object-[50%_50%]'
-                                  } transition-transform duration-500 group-hover:scale-110`}
-                                />
-                              </div>
-                            )}
+                            <img
+                              src={event.imageUrl}
+                              alt={event.title}
+                              style={{
+                                objectPosition:
+                                  event.objectPosition || '50% 50%',
+                              }}
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
                           </div>
                         )}
                         <div
