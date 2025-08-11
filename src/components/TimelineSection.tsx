@@ -35,7 +35,7 @@ const timelineEvents = [
     icon: Heart,
     color: 'text-primary',
     imageUrl: photo1,
-    objectPosition: '[100%_30%]',
+    objectPosition: '[0%_0%]',
   },
   {
     date: '2019',
