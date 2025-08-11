@@ -22,6 +22,9 @@ import photo18 from '@/assets/photo18.jpg';
 import photo19 from '@/assets/photo19.jpg';
 import photo20 from '@/assets/photo20.jpg';
 import photo21 from '@/assets/photo21.jpg';
+import photo22 from '@/assets/photo22.jpg';
+import photo23 from '@/assets/photo23.jpg';
+import photo24 from '@/assets/photo24.jpg';
 
 const timelineEvents = [
   {
@@ -89,6 +92,15 @@ const timelineEvents = [
     color: 'text-primary',
   },
   {
+    date: '19 de Novembro de 2023',
+    title: 'Show da Taylor',
+    description:
+      'Não poderia deixar de lado esse show, o primeiro e unico show que já fomos juntos, pra melhorar foi da sua cantora favorita e de uma das cantoras que eu mais gosto também. Esse foi uma das experiências mais magníficas que eu tive ao seu lado',
+    icon: Heart,
+    color: 'text-primary',
+    imageUrl: photo24,
+  },
+  {
     date: 'Dec 2023 - Jan 2024',
     title: 'Final de ano em Criciuma',
     description:
@@ -131,7 +143,7 @@ const timelineEvents = [
       'Uma viagem pra praia com a minha familia, foi curta mas eu adorei ter sua companhia nessa viagem comigo',
     icon: MapPin,
     color: 'text-accent',
-    imageUrl: photo17,
+    imageUrl: photo9,
   },
   {
     date: 'Agosto de 2025',
