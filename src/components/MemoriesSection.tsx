@@ -57,7 +57,7 @@ const memories = [
       'Todos os espetáculos e competições que eu fui te assistir, toda vez que você pisa no palco eu abro um sorriso enorme',
     category: 'Performances',
     imageUrl: photo3,
-    objectPosition: '[30%_30%]',
+    objectPosition: '[70%_25%]',
   },
   {
     title: 'Jogos',
@@ -65,7 +65,7 @@ const memories = [
       'Todos os meus treinos, amistosos e jogos que você foi assistir. A sua presença definitivamente me fez jogar melhor em cada um deles ',
     category: 'Games',
     imageUrl: photo10,
-    objectPosition: '[100%_100%]',
+    objectPosition: '[70%_70%]',
   },
   {
     title: 'Aniversários',
@@ -160,7 +160,7 @@ const MemoriesSection = () => {
                   className={`w-full h-full object-cover ${
                     memory.objectPosition
                       ? `object-${memory.objectPosition}`
-                      : 'object-[50%_50%]'
+                      : 'object-[25%_85%]'
                   } transition-transform duration-500 group-hover:scale-110`}
                 />
               </div>

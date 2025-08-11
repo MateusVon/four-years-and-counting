@@ -35,7 +35,7 @@ const timelineEvents = [
     icon: Heart,
     color: 'text-primary',
     imageUrl: photo1,
-    objectPosition: '[0%_0%]',
+    objectPosition: '[70%_30%]',
   },
   {
     date: '2019',
@@ -193,15 +193,19 @@ const TimelineSection = () => {
                       <CardContent className="p-6">
                         {event.imageUrl && (
                           <div className="relative aspect-video overflow-hidden mb-4 rounded-lg">
-                            <img
-                              src={event.imageUrl}
-                              alt={event.title}
-                              className={`w-full h-full object-cover object${
-                                event.objectPosition
-                                  ? `-${event.objectPosition}`
-                                  : '-center'
-                              } transition-transform duration-500 group-hover:scale-110`}
-                            />
+                            {event.imageUrl && (
+                              <div className="relative aspect-video overflow-hidden mb-4 rounded-lg">
+                                <img
+                                  src={event.imageUrl}
+                                  alt={event.title}
+                                  className={`w-full h-full object-cover ${
+                                    event.objectPosition
+                                      ? `object-${event.objectPosition}`
+                                      : 'object-[50%_50%]'
+                                  } transition-transform duration-500 group-hover:scale-110`}
+                                />
+                              </div>
+                            )}
                           </div>
                         )}
                         <div
